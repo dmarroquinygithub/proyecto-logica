@@ -42,9 +42,6 @@ function comenzar() {
 
             turno = 1;
             document.getElementById("turnoJugador").innerHTML = `Turno del Jugador ${jugador1.value}`;
-
-            // Ocultar la celebración al iniciar el juego
-            document.getElementById("celebracion").classList.add("oculto");
         }
     }
 }
@@ -83,8 +80,6 @@ function revisar() {
         scoreX++;
         document.getElementById("scoreX").textContent = scoreX;
         bandera = false;
-        celebrarVictoria();
-        document.getElementById("celebracion").classList.remove("oculto");
     }
 
     if (
@@ -101,13 +96,7 @@ function revisar() {
         scoreO++;
         document.getElementById("scoreO").textContent = scoreO;
         bandera = false;
-        celebrarVictoria();
-        document.getElementById("celebracion").classList.remove("oculto");
     }
-}
-
-function celebrarVictoria() {
-    // Aquí puedes añadir la lógica para mostrar una animación de celebración
 }
 
 function resetearJuego() {
@@ -124,6 +113,4 @@ function resetearJuego() {
         tab[i].className = "botonInicial";
         tab[i].value = "?";
     }
-
-    document.getElementById("celebracion").classList.add("oculto");
 }
